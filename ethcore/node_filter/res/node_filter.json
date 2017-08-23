@@ -3,7 +3,6 @@
 	"engine": {
 		"authorityRound": {
 			"params": {
-				"gasLimitBoundDivisor": "0x0400",
 				"stepDuration": 1,
 				"startStep": 2,
 				"validators": {
@@ -16,7 +15,8 @@
 		"accountStartNonce": "0x0",
 		"maximumExtraDataSize": "0x20",
 		"minGasLimit": "0x1388",
-		"networkID" : "0x69"
+		"networkID" : "0x69",
+		"gasLimitBoundDivisor": "0x0400"
 	},
 	"genesis": {
 		"seal": {

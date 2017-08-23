@@ -124,7 +124,7 @@ use super::NodeFilter;
 fn node_filter() {
 	let contract_addr = Address::from_str("0000000000000000000000000000000000000005").unwrap();
 	let data = include_bytes!("../res/node_filter.json");
-	let spec = Spec::load(&data[..]).unwrap();
+	let spec = Spec::load(::std::env::temp_dir(), &data[..]).unwrap();
 	let client_db = Arc::new(::util::kvdb::in_memory(::ethcore::db::NUM_COLUMNS.unwrap_or(0)));
 
 	let client = Client::new(
